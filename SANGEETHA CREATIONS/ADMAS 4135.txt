@@ -1,0 +1,278 @@
+----Create Database admas 4135
+
+----Create the Ordersheet Table
+CREATE TABLE `admas4135`.`ordersheet` (
+  `Po_No` INT NOT NULL,
+  `Buyer_Name` VARCHAR(45) NOT NULL,
+  `Order_No` INT NOT NULL,
+  `Specification` VARCHAR(60) NOT NULL,
+  `Order_Qty` INT NOT NULL,
+  `Excess_5%` INT NOT NULL,
+  `Total` INT NOT NULL,
+  PRIMARY KEY (`Po_No`));
+
+----Populate the Ordersheet Table
+INSERT INTO `admas4135`.`ordersheet` (`Po_No`, `Buyer_Name`, `Order_No`, `Specification`, `Order_Qty`, `Excess_5%`, `Total`) VALUES ('45', 'Admas', '4135', 'Girls Pyjama Set', '2500', '125', '2625');
+
+----Create the Yarn Purchase Table
+CREATE TABLE `admas4135`.`yarn_purchase` (
+  `Date` DATE NOT NULL,
+  `Name` VARCHAR(60) NOT NULL,
+  `City` VARCHAR(50) NOT NULL,
+  `Category` VARCHAR(45) NOT NULL,
+  `Counts` INT NOT NULL,
+  `Yarn_Colour` VARCHAR(45) NOT NULL,
+  `Yarn_Weight_In_Kgs` INT NOT NULL,
+  'Po_No' INT NOT NULL,
+  PRIMARY KEY ('Po_No'));
+
+----Populate the Yarn Purchase Table
+INSERT INTO `admas4135`.`yarn_purchase` (`Date`, `Name`, `City`, `Category`, `Counts`, `Yarn_Colour`, `Yarn_Weight_In_Kgs`, `Po_No`) VALUES ('2022-04-03', 'SRG Apparels Pvt Ltd', 'Coimbatore', 'Top', '25', 'White', '540', '1');
+INSERT INTO `admas4135`.`yarn_purchase` (`Date`, `Name`, `City`, `Category`, `Counts`, `Yarn_Colour`, `Yarn_Weight_In_Kgs`, `Po_No`) VALUES ('2022-04-05', 'Armstrong Mills Pvt Ltd', 'Tirupur', 'Pant', '30', 'Grey', '430', '2');
+INSERT INTO `admas4135`.`yarn_purchase` (`Date`, `Name`, `City`, `Category`, `Counts`, `Yarn_Colour`, `Yarn_Weight_In_Kgs`, `Po_No`) VALUES ('2022-04-09', 'Sugavaneshwara Mills Pvt Ltd', 'Karur', 'Top', '25', 'White', '780', '3');
+INSERT INTO `admas4135`.`yarn_purchase` (`Date`, `Name`, `City`, `Category`, `Counts`, `Yarn_Colour`, `Yarn_Weight_In_Kgs`, `Po_No`) VALUES ('2022-04-10', 'Armstrong Mills Pvt Ltd', 'Tirupur', 'Pant', '30', 'Grey', '900', '4');
+INSERT INTO `admas4135`.`yarn_purchase` (`Date`, `Name`, `City`, `Category`, `Counts`, `Yarn_Colour`, `Yarn_Weight_In_Kgs`, `Po_No`) VALUES ('2022-04-20', 'SRG Apparels Pvt Ltd', 'Coimbatore', 'Top', '25', 'White', '480', '5');
+INSERT INTO `admas4135`.`yarn_purchase` (`Date`, `Name`, `City`, `Category`, `Counts`, `Yarn_Colour`, `Yarn_Weight_In_Kgs`, `Po_No`) VALUES ('2022-04-25', 'Armstrong Mills Pvt Ltd', 'Tirupur', 'Pant', '30', 'Grey', '560', '6');
+INSERT INTO `admas4135`.`yarn_purchase` (`Date`, `Name`, `City`, `Category`, `Counts`, `Yarn_Colour`, `Yarn_Weight_In_Kgs`, `Po_No`) VALUES ('2022-04-26', 'Armstrong Mills Pvt Ltd', 'Tirupur', 'Pant', '30', 'Grey', '390', '7');
+INSERT INTO `admas4135`.`yarn_purchase` (`Date`, `Name`, `City`, `Category`, `Counts`, `Yarn_Colour`, `Yarn_Weight_In_Kgs`, `Po_No`) VALUES ('2022-04-28', 'Armstrong Mills Pvt Ltd', 'Tirupur', 'Pant', '30', 'Grey', '420', '8');
+INSERT INTO `admas4135`.`yarn_purchase` (`Date`, `Name`, `City`, `Category`, `Counts`, `Yarn_Colour`, `Yarn_Weight_In_Kgs`, `Po_No`) VALUES ('2022-05-02', 'Sugavaneshwara Mills Pvt Ltd', 'Karur', 'Top', '25', 'White', '120', '9');
+INSERT INTO `admas4135`.`yarn_purchase` (`Date`, `Name`, `City`, `Category`, `Counts`, `Yarn_Colour`, `Yarn_Weight_In_Kgs`, `Po_No`) VALUES ('2022-05-05', 'Sugavaneshwara Mills Pvt Ltd', 'Karur', 'Top', '25', 'White', '280', '10');
+
+----Create the Knitting Process Table
+CREATE TABLE `admas4135`.`knitting_process` (
+  `Date` DATE NOT NULL,
+  `Name` VARCHAR(60) NOT NULL,
+  `City` VARCHAR(60) NOT NULL,
+  `Category` VARCHAR(45) NOT NULL,
+  `Colour` VARCHAR(45) NOT NULL,
+  `Yarn_Weight` FLOAT(6,3) NOT NULL,
+  `Fabric_Weight` FLOAT(6,3) NOT NULL,
+  `Weight_Loss` FLOAT(5,3) NOT NULL,
+  `Balance_Yarn` FLOAT(5,3) NOT NULL,
+  PRIMARY KEY (`Fabric_Weight`));
+
+----Populate the Knitting Process Table
+INSERT INTO `admas4135`.`knitting_process` (`Date`, `Name`, `City`, `Category`, `Colour`, `Yarn_Weight`, `Fabric_Weight`, `Weight_Loss`, `Balance_Yarn`) VALUES ('2022-04-09', 'Anjana Adorables', 'Tirupur', 'Top', 'White', '700.000', '665.800', '22.800', '11.400');
+INSERT INTO `admas4135`.`knitting_process` (`Date`, `Name`, `City`, `Category`, `Colour`, `Yarn_Weight`, `Fabric_Weight`, `Weight_Loss`, `Balance_Yarn`) VALUES ('2022-04-15', 'Anjana Adorables', 'Tirupur', 'Top', 'White', '400.000', '353.800', '14.600', '31.600');
+INSERT INTO `admas4135`.`knitting_process` (`Date`, `Name`, `City`, `Category`, `Colour`, `Yarn_Weight`, `Fabric_Weight`, `Weight_Loss`, `Balance_Yarn`) VALUES ('2022-04-17', 'Anjana Adorables', 'Tirupur', 'Top', 'White', '650.000', '602.084', '22.945', '24.971');
+INSERT INTO `admas4135`.`knitting_process` (`Date`, `Name`, `City`, `Category`, `Colour`, `Yarn_Weight`, `Fabric_Weight`, `Weight_Loss`, `Balance_Yarn`) VALUES ('2022-04-19', 'Anjana Adorables', 'Tirupur', 'Top', 'White', '450.000', '407.210', '14.895', '27.895');
+INSERT INTO `admas4135`.`knitting_process` (`Date`, `Name`, `City`, `Category`, `Colour`, `Yarn_Weight`, `Fabric_Weight`, `Weight_Loss`, `Balance_Yarn`) VALUES ('2022-04-11', 'RMP Impex', 'Tirupur', 'pant', 'Grey', '800.000', '747.100', '40.160', '12.740');
+INSERT INTO `admas4135`.`knitting_process` (`Date`, `Name`, `City`, `Category`, `Colour`, `Yarn_Weight`, `Fabric_Weight`, `Weight_Loss`, `Balance_Yarn`) VALUES ('2022-04-17', 'RMP Impex', 'Tirupur', 'pant', 'Grey', '560.000', '489.700', '27.272', '43.028');
+INSERT INTO `admas4135`.`knitting_process` (`Date`, `Name`, `City`, `Category`, `Colour`, `Yarn_Weight`, `Fabric_Weight`, `Weight_Loss`, `Balance_Yarn`) VALUES ('2022-04-21', 'RMP Impex', 'Tirupur', 'pant', 'Grey', '980.000', '877.300', '50.274', '52.426');
+INSERT INTO `admas4135`.`knitting_process` (`Date`, `Name`, `City`, `Category`, `Colour`, `Yarn_Weight`, `Fabric_Weight`, `Weight_Loss`, `Balance_Yarn`) VALUES ('2022-05-07', 'RMP Impex', 'Tirupur', 'pant', 'Grey', '360.000', '321.770', '17.856', '20.374');
+
+----Create the Dyeing Process Table
+CREATE TABLE `admas4135`.`dyeing_process` (
+  `Date` DATE NOT NULL,
+  `Knitting_Name` VARCHAR(60) NOT NULL,
+  `Dyeing_Name` VARCHAR(60) NOT NULL,
+  `Category` VARCHAR(45) NOT NULL,
+  `Colour` VARCHAR(45) NOT NULL,
+  `Fabric_Weight` FLOAT(6,3) NOT NULL,
+  `Dyed_Fabric_Weight` FLOAT(6,3) NOT NULL,
+  `Weight_Loss` FLOAT(5,3) NOT NULL,
+  PRIMARY KEY (`Fabric_Weight`));
+
+----Populate the Dyeing Process Table
+INSERT INTO `admas4135`.`dyeing_process` (`Date`, `Knitting_Name`, `Dyeing_Name`, `Category`, `Colour`, `Fabric_Weight`, `Dyed_Fabric_Weight`, `Weight_Loss`) VALUES ('2022-04-11', 'Anjana Adorables', 'Allwin Textiles', 'Top', 'Pink', '665.800', '646.581', '19.218');
+INSERT INTO `admas4135`.`dyeing_process` (`Date`, `Knitting_Name`, `Dyeing_Name`, `Category`, `Colour`, `Fabric_Weight`, `Dyed_Fabric_Weight`, `Weight_Loss`) VALUES ('2022-04-19', 'Anjana Adorables', 'Allwin Textiles', 'Top', 'Pink', '353.800', '344.035', '09.764');
+INSERT INTO `admas4135`.`dyeing_process` (`Date`, `Knitting_Name`, `Dyeing_Name`, `Category`, `Colour`, `Fabric_Weight`, `Dyed_Fabric_Weight`, `Weight_Loss`) VALUES ('2022-04-19', 'Anjana Adorables', 'Allwin Textiles', 'Top', 'Pink', '602.084', '585.045', '17.038');
+INSERT INTO `admas4135`.`dyeing_process` (`Date`, `Knitting_Name`, `Dyeing_Name`, `Category`, `Colour`, `Fabric_Weight`, `Dyed_Fabric_Weight`, `Weight_Loss`) VALUES ('2022-04-22', 'Anjana Adorables', 'Allwin Textiles', 'Top', 'Pink', '407.210', '396.052', '11.157');
+
+----Create the Printing Process Table
+CREATE TABLE `admas4135`.`printing_process` (
+  `Date` DATE NOT NULL,
+  `Printing_Name` VARCHAR(60) NOT NULL,
+  `Printing_Design` VARCHAR(60) NOT NULL,
+  `Category` VARCHAR(45) NOT NULL,
+  `Colour` VARCHAR(45) NOT NULL,
+  `Fabric_Weight` FLOAT(7,3) NOT NULL,
+  `Printed_Fabric_Weight` FLOAT(7,3) NOT NULL,
+  `Weight_Loss` FLOAT(5,3) NOT NULL,
+  PRIMARY KEY (`Fabric_Weight`));
+
+----Populate the Printing Process Table
+INSERT INTO `admas4135`.`printing_process` (`Date`, `Printing_Name`, `Printing_Design`, `Category`, `Colour`, `Fabric_Weight`, `Printed_Fabric_Weight`, `Weight_Loss`) VALUES ('2022-04-15', 'Sri Varshini Knit Printers', 'AOP Dot Print', 'Pant', 'White', '0747.100', '0739.200', '07.900');
+INSERT INTO `admas4135`.`printing_process` (`Date`, `Printing_Name`, `Printing_Design`, `Category`, `Colour`, `Fabric_Weight`, `Printed_Fabric_Weight`, `Weight_Loss`) VALUES ('2022-04-22', 'Sri Varshini Knit Printers', 'AOP Dot Print', 'Pant', 'White', '1367.000', '1338.293', '28.707');
+INSERT INTO `admas4135`.`printing_process` (`Date`, `Printing_Name`, `Printing_Design`, `Category`, `Colour`, `Fabric_Weight`, `Printed_Fabric_Weight`, `Weight_Loss`) VALUES ('2022-05-08', 'Sri Varshini Knit Printers', 'AOP Dot Print', 'Pant', 'White', '0321.770', '0318.276', '03.494');
+INSERT INTO `admas4135`.`printing_process` (`Date`, `Printing_Name`, `Printing_Design`, `Category`, `Colour`, `Fabric_Weight`, `Printed_Fabric_Weight`, `Weight_Loss`) VALUES ('2022-04-15', 'Krishna Textile Process', 'AOP Floral Print', 'Top', 'Aqua Green', '0646.581', '0639.540', '07.041');
+INSERT INTO `admas4135`.`printing_process` (`Date`, `Printing_Name`, `Printing_Design`, `Category`, `Colour`, `Fabric_Weight`, `Printed_Fabric_Weight`, `Weight_Loss`) VALUES ('2022-04-22', 'Krishna Textile Process', 'AOP Floral Print', 'Top', 'Aqua Green', '0929.080', '0910.685', '18.395');
+INSERT INTO `admas4135`.`printing_process` (`Date`, `Printing_Name`, `Printing_Design`, `Category`, `Colour`, `Fabric_Weight`, `Printed_Fabric_Weight`, `Weight_Loss`) VALUES ('2022-04-25', 'Krishna Textile Process', 'AOP Floral Print', 'Top', 'Aqua Green', '0396.052', '0392.171', '03.881');
+
+----Create the Compacting Process Table
+CREATE TABLE `admas4135`.`compacting_process` (
+  `Date` DATE NOT NULL,
+  `Printing_Name` VARCHAR(60) NOT NULL,
+  `Compacting_Name` VARCHAR(60) NOT NULL,
+  `Category` VARCHAR(45) NOT NULL,
+  `Printed_Fabric_Weight` FLOAT(7,3) NOT NULL,
+  `Compacting_Weight` FLOAT(7,3) NOT NULL,
+  `Weight_Loss` FLOAT(6,3) NOT NULL,
+  PRIMARY KEY (`Printed_Fabric_Weight`));
+
+----Populate the Compacting Process table
+INSERT INTO `admas4135`.`compacting_process` (`Date`, `Printing_Name`, `Compacting_Name`, `Category`, `Printed_Fabric_Weight`, `Compacting_Weight`, `Weight_Loss`) VALUES ('2022-04-22', 'Sri Varshini Knit Printers', 'Deepthy Finishers', 'Pant', '2077.493', '1960.323', '117.170');
+INSERT INTO `admas4135`.`compacting_process` (`Date`, `Printing_Name`, `Compacting_Name`, `Category`, `Printed_Fabric_Weight`, `Compacting_Weight`, `Weight_Loss`) VALUES ('2022-05-10', 'Sri Varshini Knit Printers', 'Deepthy Finishers', 'Pant', '0318.276', '0305.896', '012.380');
+INSERT INTO `admas4135`.`compacting_process` (`Date`, `Printing_Name`, `Compacting_Name`, `Category`, `Printed_Fabric_Weight`, `Compacting_Weight`, `Weight_Loss`) VALUES ('2022-04-24', 'Krishna Textile Process', 'Deepthy Finishers', 'Top', '0639.540', '0610.953', '028.587');
+INSERT INTO `admas4135`.`compacting_process` (`Date`, `Printing_Name`, `Compacting_Name`, `Category`, `Printed_Fabric_Weight`, `Compacting_Weight`, `Weight_Loss`) VALUES ('2022-05-05', 'Krishna Textile Process', 'Deepthy Finishers', 'Top', '1302.856', '1237.323', '065.533');
+
+----Create the Accessories Purchase Table
+CREATE TABLE `admas4135`.`accessories_purchase` (
+  `Date` DATE NOT NULL,
+  `Supplier_Name` VARCHAR(60) NOT NULL,
+  `Category` VARCHAR(45) NOT NULL,
+  `Material` VARCHAR(60) NOT NULL,
+  `Size` VARCHAR(45) NULL,
+  `Colour` VARCHAR(45) NOT NULL,
+  `Quantity` INT NOT NULL,
+  PRIMARY KEY (`Date`));
+
+----Populate the Accessories Purchase Table
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Colour`, `Quantity`) VALUES ('2022-05-02', 'Keerthi Threads', 'Top', 'Sewing Thread', 'Pink', '120');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Colour`, `Quantity`) VALUES ('2022-05-03', 'Keerthi Threads', 'Top', 'Sewing Thread', 'Pink', '380');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Colour`, `Quantity`) VALUES ('2022-05-04', 'Keerthi Threads', 'Top', 'Sewing Thread', 'Pink', '480');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Colour`, `Quantity`) VALUES ('2022-05-05', 'Keerthi Threads', 'Top', 'Sewing Thread', 'Pink', '520');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Colour`, `Quantity`) VALUES ('2022-05-06', 'Keerthi Threads', 'Pant', 'Sewing Thread', 'Grey', '400');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Colour`, `Quantity`) VALUES ('2022-05-07', 'Keerthi Threads', 'Pant', 'Sewing Thread', 'Grey', '730');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Colour`, `Quantity`) VALUES ('2022-05-08', 'Keerthi Threads', 'Pant', 'Sewing Thread', 'Grey', '370');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Colour`, `Quantity`) VALUES ('2022-05-09', 'Jain Button House', 'Top', 'Buttons', 'White', '2740');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Colour`, `Quantity`) VALUES ('2022-05-10', 'Jain Button House', 'Top', 'Buttons', 'White', '700');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Colour`, `Quantity`) VALUES ('2022-05-11', 'Jain Button House', 'Top', 'Buttons', 'White', '1810');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Size`, `Colour`, `Quantity`) VALUES ('2022-05-12', 'Sangeetha Labels', 'Top', 'Size Labels', 'XS', 'White', '420');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Size`, `Colour`, `Quantity`) VALUES ('2022-05-13', 'Sangeetha Labels', 'Top', 'Size Labels', 'S', 'White', '315');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Size`, `Colour`, `Quantity`) VALUES ('2022-05-14', 'Sangeetha Labels', 'Top', 'Size Labels', 'M', 'White', '399');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Size`, `Colour`, `Quantity`) VALUES ('2022-05-15', 'Sangeetha Labels', 'Top', 'Size Labels', 'L', 'White', '441');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Size`, `Colour`, `Quantity`) VALUES ('2022-05-16', 'Sangeetha Labels', 'Top', 'Size Labels', 'XL', 'White', '725');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Size`, `Colour`, `Quantity`) VALUES ('2022-05-17', 'Sangeetha Labels', 'Top', 'Size Labels', 'XXL', 'White', '326');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Size`, `Colour`, `Quantity`) VALUES ('2022-05-18', 'Sangeetha Labels', 'Pant', 'Size Labels', 'XS', 'White', '420');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Size`, `Colour`, `Quantity`) VALUES ('2022-05-19', 'Sangeetha Labels', 'Pant', 'Size Labels', 'S', 'White', '315');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Size`, `Colour`, `Quantity`) VALUES ('2022-05-20', 'Sangeetha Labels', 'Pant', 'Size Labels', 'M', 'White', '399');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Size`, `Colour`, `Quantity`) VALUES ('2022-05-21', 'Sangeetha Labels', 'Pant', 'Size Labels', 'L', 'White', '441');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Size`, `Colour`, `Quantity`) VALUES ('2022-05-22', 'Sangeetha Labels', 'Pant', 'Size Labels', 'XL', 'White', '725');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Size`, `Colour`, `Quantity`) VALUES ('2022-05-23', 'Sangeetha Labels', 'Pant', 'Size Labels', 'XXL', 'White', '326');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Size`, `Colour`, `Quantity`) VALUES ('2022-05-24', 'Sangeetha Labels', 'Top', 'WashCare Labels', 'XS', 'White', '420');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Size`, `Colour`, `Quantity`) VALUES ('2022-05-25', 'Sangeetha Labels', 'Top', 'WashCare Labels', 'S', 'White', '315');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Size`, `Colour`, `Quantity`) VALUES ('2022-05-26', 'Sangeetha Labels', 'Top', 'WashCare Labels', 'M', 'White', '399');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Size`, `Colour`, `Quantity`) VALUES ('2022-05-27', 'Sangeetha Labels', 'Top', 'WashCare Labels', 'L', 'White', '441');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Size`, `Colour`, `Quantity`) VALUES ('2022-05-28', 'Sangeetha Labels', 'Top', 'WashCare Labels', 'XL', 'White', '725');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Size`, `Colour`, `Quantity`) VALUES ('2022-05-29', 'Sangeetha Labels', 'Top', 'WashCare Labels', 'XXL', 'White', '326');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Size`, `Colour`, `Quantity`) VALUES ('2022-05-30', 'Sangeetha Labels', 'Pant', 'WashCare Labels', 'XS', 'White', '420');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Size`, `Colour`, `Quantity`) VALUES ('2022-06-01', 'Sangeetha Labels', 'Pant', 'WashCare Labels', 'S', 'White', '315');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Size`, `Colour`, `Quantity`) VALUES ('2022-06-02', 'Sangeetha Labels', 'Pant', 'WashCare Labels', 'M', 'White', '399');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Size`, `Colour`, `Quantity`) VALUES ('2022-06-03', 'Sangeetha Labels', 'Pant', 'WashCare Labels', 'L', 'White', '441');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Size`, `Colour`, `Quantity`) VALUES ('2022-06-04', 'Sangeetha Labels', 'Pant', 'WashCare Labels', 'XL', 'White', '725');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Size`, `Colour`, `Quantity`) VALUES ('2022-06-05', 'Sangeetha Labels', 'Pant', 'WashCare Labels', 'XXL', 'White', '326');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Colour`, `Quantity`) VALUES ('2022-06-06', 'Radha Laces', 'Pant', 'Rope', 'Pink', '1500');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Colour`, `Quantity`) VALUES ('2022-06-07', 'Radha Laces', 'Pant', 'Rope', 'Pink', '775');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Colour`, `Quantity`) VALUES ('2022-06-08', 'Radha Laces', 'Pant', 'Rope', 'Pink', '425');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Size`, `Colour`, `Quantity`) VALUES ('2022-06-09', 'MS Packaging', 'Set', 'Packing Cover', 'XS', 'White', '420');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Size`, `Colour`, `Quantity`) VALUES ('2022-06-10', 'MS Packaging', 'Set', 'Packing Cover', 'S', 'White', '315');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Size`, `Colour`, `Quantity`) VALUES ('2022-06-11', 'MS Packaging', 'Set', 'Packing Cover', 'M', 'White', '399');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Size`, `Colour`, `Quantity`) VALUES ('2022-06-12', 'MS Packaging', 'Set', 'Packing Cover', 'L', 'White', '441');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Size`, `Colour`, `Quantity`) VALUES ('2022-06-13', 'MS Packaging', 'Set', 'Packing Cover', 'XL', 'White', '725');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Size`, `Colour`, `Quantity`) VALUES ('2022-06-14', 'MS Packaging', 'Set', 'Packing Cover', 'XXL', 'White', '326');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Size`, `Colour`, `Quantity`) VALUES ('2022-06-15', 'MS Packaging', 'Set', 'Carton Boxes', 'eight inches', 'Brown', '21');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Size`, `Colour`, `Quantity`) VALUES ('2022-06-16', 'MS Packaging', 'Set', 'Carton Boxes', 'eleven inches', 'Brown', '21');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Size`, `Colour`, `Quantity`) VALUES ('2022-06-17', 'MS Packaging', 'Set', 'Carton Boxes', 'twelve inches', 'Brown', '20');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Size`, `Colour`, `Quantity`) VALUES ('2022-06-18', 'MS Packaging', 'Set', 'Carton Boxes', 'thirteen inches', 'Brown', '22');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Size`, `Colour`, `Quantity`) VALUES ('2022-06-19', 'MS Packaging', 'Set', 'Carton Boxes', 'fourteen inches', 'Brown', '36');
+INSERT INTO `admas4135`.`accessories_purchase` (`Date`, `Supplier_Name`, `Category`, `Material`, `Size`, `Colour`, `Quantity`) VALUES ('2022-06-20', 'MS Packaging', 'Set', 'Carton Boxes', 'seventeen inches', 'Brown', '16');
+
+----Create the Packing Table
+CREATE TABLE `admas4135`.`packing` (
+  `Date` DATE NOT NULL,
+  `Packing_Name` VARCHAR(45) NOT NULL,
+  `Category` VARCHAR(45) NOT NULL,
+  `Size` VARCHAR(45) NOT NULL,
+  `No_of_Cartons` INT NOT NULL,
+  `No_of_Sets` INT NOT NULL,
+  PRIMARY KEY (`No_of_Sets`));
+
+----Populate the Packing Table
+INSERT INTO `admas4135`.`packing` (`Date`, `Packing_Name`, `Category`, `Size`, `No_of_Cartons`, `No_of_Sets`) VALUES ('2022-05-21', 'Babu Packing', 'Set', 'eight inches', '21', '400');
+INSERT INTO `admas4135`.`packing` (`Date`, `Packing_Name`, `Category`, `Size`, `No_of_Cartons`, `No_of_Sets`) VALUES ('2022-05-21', 'Babu Packing', 'Set', 'eleven inches ', '21', '300');
+INSERT INTO `admas4135`.`packing` (`Date`, `Packing_Name`, `Category`, `Size`, `No_of_Cartons`, `No_of_Sets`) VALUES ('2022-05-21', 'Babu Packing', 'Set', 'twelve inches', '20', '380');
+INSERT INTO `admas4135`.`packing` (`Date`, `Packing_Name`, `Category`, `Size`, `No_of_Cartons`, `No_of_Sets`) VALUES ('2022-05-21', 'Babu Packing', 'Set', 'thirteen inches', '22', '420');
+INSERT INTO `admas4135`.`packing` (`Date`, `Packing_Name`, `Category`, `Size`, `No_of_Cartons`, `No_of_Sets`) VALUES ('2022-05-21', 'Babu Packing', 'Set', 'fourteen inches', '36', '690');
+INSERT INTO `admas4135`.`packing` (`Date`, `Packing_Name`, `Category`, `Size`, `No_of_Cartons`, `No_of_Sets`) VALUES ('2022-05-21', 'Babu Packing', 'Set', 'seventeen inches', '16', '310');
+
+----Create the Ironing Table
+CREATE TABLE `admas4135`.`ironing` (
+  `Date` DATE NOT NULL,
+  `Ironing_Name` VARCHAR(60) NOT NULL,
+  `Category` VARCHAR(45) NOT NULL,
+  `XS` INT NULL,
+  `S` INT NULL,
+  `M` INT NULL,
+  `L` INT NULL,
+  `XL` INT NULL,
+  `XXL` INT NULL,
+  PRIMARY KEY (`Date`));
+
+----Populate the Ironing Table
+INSERT INTO `admas4135`.`ironing` (`Date`, `Ironing_Name`, `Category`, `XS`, `XXL`) VALUES ('2022-05-19', 'Babu Ironing', 'Set', '420', '326');
+INSERT INTO `admas4135`.`ironing` (`Date`, `Ironing_Name`, `Category`, `S`, `L`, `XL`) VALUES ('2022-05-20', 'Babu Ironing', 'Set', '315', '441', '725');
+INSERT INTO `admas4135`.`ironing` (`Date`, `Ironing_Name`, `Category`, `M`) VALUES ('2022-05-21', 'Babu Ironing', 'Set', '399');
+
+----Create the Checking Table
+CREATE TABLE `admas4135`.`checking` (
+  `Date` DATE NOT NULL,
+  `Checking_Name` VARCHAR(45) NOT NULL,
+  `Category` VARCHAR(45) NOT NULL,
+  `XS` INT NULL,
+  `S` INT NULL,
+  `M` INT NULL,
+  `L` INT NULL,
+  `XL` INT NULL,
+  `XXL` INT NULL,
+  PRIMARY KEY (`Date`));
+
+----Populate the Checking table
+INSERT INTO `admas4135`.`checking` (`Date`, `Checking_Name`, `Category`, `XS`, `M`, `XXL`) VALUES ('2022-05-14', 'RKV Checking', 'Pant', '420', '399', '326');
+INSERT INTO `admas4135`.`checking` (`Date`, `Checking_Name`, `Category`, `S`, `L`, `XL`) VALUES ('2022-05-16', 'RKV Checking', 'Pant', '315', '441', '725');
+INSERT INTO `admas4135`.`checking` (`Date`, `Checking_Name`, `Category`, `S`, `L`) VALUES ('2022-05-05', 'Arjun Checking', 'Top', '315', '441');
+INSERT INTO `admas4135`.`checking` (`Date`, `Checking_Name`, `Category`, `XS`, `M`, `XL`, `XXL`) VALUES ('2022-05-17', 'Arjun Checking', 'Top', '420', '399', '725', '326');
+
+----Create the Cutting Table
+CREATE TABLE `admas4135`.`cutting` (
+  `Date` DATE NOT NULL,
+  `Cutting_Name` VARCHAR(45) NOT NULL,
+  `Fabric_Weight` FLOAT(7,3) NOT NULL,
+  `Category` VARCHAR(45) NOT NULL,
+  `XS` INT NOT NULL,
+  `S` INT NOT NULL,
+  `M` INT NOT NULL,
+  `L` INT NOT NULL,
+  `XL` INT NOT NULL,
+  `XXL` INT NOT NULL,
+  PRIMARY KEY (`Fabric_Weight`));
+
+----Populate the Cutting Table
+INSERT INTO `admas4135`.`cutting` (`Date`, `Cutting_Name`, `Fabric_Weight`, `Category`, `XS`, `S`, `M`, `L`, `XL`, `XXL`) VALUES ('2022-04-25', 'Ramesh Cutting', '1960.323', 'Pant', '365', '257', '285', '374', '659', '298');
+INSERT INTO `admas4135`.`cutting` (`Date`, `Cutting_Name`, `Fabric_Weight`, `Category`, `XS`, `S`, `M`, `L`, `XL`, `XXL`) VALUES ('2022-05-12', 'Ramesh Cutting', '0305.896', 'Pant', '55', '58', '114', '67', '66', '28');
+INSERT INTO `admas4135`.`cutting` (`Date`, `Cutting_Name`, `Fabric_Weight`, `Category`, `XS`, `S`, `M`, `L`, `XL`, `XXL`) VALUES ('2022-04-30', 'VS Cutting', '0610.953', 'Top', '53', '45', '67', '52', '88', '44');
+INSERT INTO `admas4135`.`cutting` (`Date`, `Cutting_Name`, `Fabric_Weight`, `Category`, `XS`, `S`, `M`, `L`, `XL`, `XXL`) VALUES ('2022-05-07', 'VS Cutting', '1237.323', 'Top', '367', '270', '332', '389', '637', '282');
+
+----Create the Sewing Table
+CREATE TABLE `admas4135`.`sewing` (
+  `Date` DATE NOT NULL,
+  `Sewing_Name` VARCHAR(45) NOT NULL,
+  `Type` VARCHAR(45) NOT NULL,
+  `Category` VARCHAR(45) NOT NULL,
+  `XS` INT NULL,
+  `S` INT NULL,
+  `M` INT NULL,
+  `L` INT NULL,
+  `XL` INT NULL,
+  `XXL` INT NULL,
+  PRIMARY KEY (`Date`));
+
+----Populate the Sewing Table
+INSERT INTO `admas4135`.`sewing` (`Date`, `Sewing_Name`, `Type`, `Category`, `XS`, `S`, `L`, `XXL`) VALUES ('2022-04-28', 'Mohan', 'Powertable', 'Pant', '420', '315', '441', '326');
+INSERT INTO `admas4135`.`sewing` (`Date`, `Sewing_Name`, `Type`, `Category`, `M`, `XL`) VALUES ('2022-05-12', 'Marimuthu', 'Powertable', 'Pant', '399', '725');
+INSERT INTO `admas4135`.`sewing` (`Date`, `Sewing_Name`, `Type`, `Category`, `S`, `M`, `L`, `XXL`) VALUES ('2022-05-02', 'Kumar', 'Powertable', 'Top', '315', '399', '0', '326');
+INSERT INTO `admas4135`.`sewing` (`Date`, `Sewing_Name`, `Type`, `Category`, `XS`, `L`, `XL`) VALUES ('2022-05-08', 'Mohan', 'Powertable', 'Top', '420', '441', '725');
+INSERT INTO `admas4135`.`sewing` (`Date`, `Sewing_Name`, `Type`, `Category`, `S`, `L`, `XL`) VALUES ('2022-04-30', 'Prakash', 'Singer', 'Pant', '315', '441', '725');
+INSERT INTO `admas4135`.`sewing` (`Date`, `Sewing_Name`, `Type`, `Category`, `XS`, `M`, `L`, `XXL`) VALUES ('2022-05-13', 'Sagar', 'Singer', 'Pant', '420', '399', '0', '326');
+INSERT INTO `admas4135`.`sewing` (`Date`, `Sewing_Name`, `Type`, `Category`, `XS`, `S`, `L`) VALUES ('2022-05-03', 'Prakash', 'Singer', 'Top', '420', '315', '441');
+INSERT INTO `admas4135`.`sewing` (`Date`, `Sewing_Name`, `Type`, `Category`, `M`, `XL`, `XXL`) VALUES ('2022-05-16', 'Prakash', 'Singer', 'Top', '399', '725', '326');
